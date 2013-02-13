@@ -50,8 +50,13 @@
 				this.$container 			= 	jQuery(e);
 				this.options				=	o || {};
 				
+				this.$container.css({
+										'position' : 'relative'
+									});
+				
 				this.$table 				=	this.$container.find('table.dataTable').css({
-																								'min-height': 35
+																								'min-height': 35,
+																								'position': 'relative'
 																							});
 				this.$rows					=	this.$table.find('.dataTableRows');
 				this.$cloneable				=	this.$container.find('table.dataTableCloneable');
@@ -94,7 +99,7 @@
 		};
 		
 		jQuery.tableIt.fn = jQuery.tableIt.prototype = {
-			tableIt:	'1.0.1'
+			tableIt:	'1.0'
 		};
 	
 		jQuery.tableIt.fn.extend = jQuery.tableIt.extend = jQuery.extend;
@@ -258,7 +263,7 @@
 										var height = self.$table.find('tbody').height();
 										var overlayHeight = (height < 50 )? 50: height;
 										
-										self.$table.css('position','relative');
+										self.$table.css({'position':'relative'});
 										
 										var $overlay = $('<div class="dataTableOverlay"></div>');
 										$overlay.css({
@@ -267,8 +272,9 @@
 														'width'			:	self.$table.find('tbody').width(),
 														'background'	:	'rgba(0,0,0,0.03)',
 														'z-index'		:	1000,
-														'top'			:	88,
-														'text-align'	:	'center'
+														'top'			:	self.$table.find('tbody').offset().top - self.$container.offset().top - 2,
+														'text-align'	:	'center',
+														'border-radius' :	'0 0 5px 5px'
 													});
 										
 										var $loading = $('<span>Loading...</span>').css({
