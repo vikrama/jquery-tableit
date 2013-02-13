@@ -1,0 +1,225 @@
+/* ---------------------------------------------------------------------------------------------------------
+ * STANDARD TABLES
+ * --------------------------------------------------------------------------------------------------------*/
+
+	table.std {
+		border-radius: 5px;
+		border-collapse: separate;
+		border-spacing: 0;
+		border: 1px solid #d8d8d8;
+		border-width: 1px 0 0 1px;
+		}
+
+	table.std tr {
+		min-height: 35px;
+		}
+
+	table.std td,
+	table.std th {
+		padding: 10px;
+		border: 1px solid #d8d8d8;
+		border-width: 0 1px 1px 0;
+		}
+
+	table.std tbody tr td.first.footer,
+	table.std tbody tr:last-child td.first {
+		border-bottom-left-radius: 5px;
+		}
+
+	table.std tbody tr td.last.footer,
+	table.std tbody tr:last-child td.last {
+		border-bottom-right-radius: 5px;
+		}
+
+	table.std.wide td,
+	table.std.wide th {
+		width: 1%;
+		}
+
+	table.std.wide td.wide2,
+	table.std.wide th.wide2 {
+		width: 2%;
+		}
+
+	table.std.wide td.wide3,
+	table.std.wide th.wide3 {
+		width: 3%;
+		}
+
+	table.std.wide td.wide5,
+	table.std.wide th.wide5 {
+		width: 5%;
+		}
+
+	table.std.wide thead td,
+	table.std.wide thead th {
+		border-bottom-color: #b0b0b0;
+		}
+
+	table.std.wide thead td i.sort,
+	table.std.wide thead th i.sort {
+
+		}
+
+	table.std thead th {
+		font-weight: bold;
+		font-size: 14px;
+		}
+
+	table.std thead:first-child tr:first-child td:first-child,
+	table.std thead:first-child tr:first-child th:first-child {
+		border-top-left-radius: 5px;
+		}
+
+	table.std thead tr:first-child td:last-child,
+	table.std thead tr:first-child th:last-child {
+		border-top-right-radius: 5px;
+		}
+
+	table.std tbody tr:nth-child(2n-1) {
+		background-color: #f9f9f9;
+		}
+
+	table.std.sm thead th {
+		font-size: 13px;
+		}
+
+	table.std.sm tbody td {
+		font-size: 11px;
+		}
+
+	/*
+	 * Sorting
+	 */
+
+	table thead td.sortable,
+	table thead th.sortable {
+		cursor: pointer;
+		}
+
+	table thead td.sortable:hover .link,
+	table thead th.sortable:hover .link {
+		text-decoration: underline;
+		}
+
+	table thead td.sortAsc .link:after,
+	table thead th.sortAsc .link:after,
+	table thead td.sortAsc a:after,
+	table thead th.sortAsc a:after {
+		content: '';
+		display: inline-block;
+		width: 9px;
+		height: 5px;
+		margin-left: 5px;
+		background: transparent url(/static/img/sprites/sprite-common.png) no-repeat -200px -370px;		/* pointer up black */
+		vertical-align: middle;
+		}
+
+	table thead td.sortDesc .link:after,
+	table thead th.sortDesc .link:after,
+	table thead td.sortDesc a:after,
+	table thead th.sortDesc a:after {
+		content: '';
+		display: inline-block;
+		width: 9px;
+		height: 5px;
+		margin-left: 5px;
+		background: transparent url(/static/img/sprites/sprite-common.png) no-repeat -180px -370px;		/* pointer down black */
+		vertical-align: middle;
+		}
+
+	/*
+	 * Alignment classes
+	 */
+	table.alignTop td,
+	table.alignTop th,
+	table tr.alignTop td,
+	table tr.alignTop th,
+	table td.alignTop,
+	table th.alignTop {
+		vertical-align: top;
+		}
+
+	table.alignBot td,
+	table.alignBot th,
+	table tr.alignBot td,
+	table tr.alignBot th,
+	table td.alignBot,
+	table th.alignBot {
+		vertical-align: bottom;
+		}
+
+	table.alignCenter td,
+	table.alignCenter th,
+	table tr.alignCenter td,
+	table tr.alignCenter th,
+	table td.alignCenter,
+	table th.alignCenter {
+		text-align: center;
+		}
+
+	/*
+	 * Padding classes
+	 */
+	table.pad5 td,
+	table.pad5 th,
+	table tr.pad5 td,
+	table tr.pad5 th {
+		padding: 5px;
+		}
+
+	table.padVert5 td,
+	table.padVert5 th,
+	table tr.padVert5 td,
+	table tr.padVert5 th {
+		padding-top: 5px;
+		padding-bottom: 5px;
+		}
+
+	table.padHorz5 td,
+	table.padHorz5 th,
+	table tr.padHorz5 td,
+	table tr.padHorz5 th {
+		padding-left: 5px;
+		padding-right: 5px;
+		}
+
+	/*
+	 * Column Hilites
+	 */
+
+	table.std.colHilite1 tbody td:nth-child(1),
+	table.std.colHilite2 tbody td:nth-child(2),
+	table.std.colHilite3 tbody td:nth-child(3),
+	table.std.colHilite4 tbody td:nth-child(4),
+	table.std.colHilite5 tbody td:nth-child(5),
+	table.std.colHilite6 tbody td:nth-child(6),
+	table.std.colHilite7 tbody td:nth-child(7),
+	table.std.colHilite8 tbody td:nth-child(8),
+	table.std.colHilite9 tbody td:nth-child(9) {
+		background-color: #f4f4f4;
+		}
+
+	table.std.colHilite1 tbody tr:nth-child(2n-1) td:nth-child(1),
+	table.std.colHilite2 tbody tr:nth-child(2n-1) td:nth-child(2),
+	table.std.colHilite3 tbody tr:nth-child(2n-1) td:nth-child(3),
+	table.std.colHilite4 tbody tr:nth-child(2n-1) td:nth-child(4),
+	table.std.colHilite5 tbody tr:nth-child(2n-1) td:nth-child(5),
+	table.std.colHilite6 tbody tr:nth-child(2n-1) td:nth-child(6),
+	table.std.colHilite7 tbody tr:nth-child(2n-1) td:nth-child(7),
+	table.std.colHilite8 tbody tr:nth-child(2n-1) td:nth-child(8),
+	table.std.colHilite9 tbody tr:nth-child(2n-1) td:nth-child(9) {
+		background-color: #eee;
+		}
+
+	table.std tbody tr.footer,
+	table.std tbody tr.footer td {
+		background-color: white;
+		font-weight: bold;
+		}
+		
+	table.std span.link {
+		color: #0378BB;
+		text-decoration: none;
+		cursor: pointer;
+	}
